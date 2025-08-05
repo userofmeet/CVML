@@ -13,9 +13,9 @@ You can find the complete lab manual [here](CVML_lab_manual.pdf).
 > Each folder contains well-commented code, sample inputs (images or datasets), and corresponding outputs.
 
 - `week_01/`: Basic image processing operations (e.g., resizing, cropping)
-- `week_02/`: Image arithmetic, bitwise operations
-- `week_03/`: Filters and edge detection
-- `week_04/`: Histogram equalization and thresholding
+- `week_02/`: fundamental image processing 
+- `week_03/`: contrast enhancement techniques 
+- `week_04/`: effect of sampling and quantization on an image
 - `week_05/`: Morphological operations
 - *(...add more weeks as needed...)*
 
