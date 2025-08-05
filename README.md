@@ -16,7 +16,7 @@ You can find the complete lab manual [here](CVML_lab_manual.pdf).
 - `week_02/`: fundamental image processing 
 - `week_03/`: contrast enhancement techniques 
 - `week_04/`: effect of sampling and quantization on an image
-- `week_05/`: Morphological operations
+- `week_05/`: smoothing filters in spatial domain
 - *(...add more weeks as needed...)*
 
 ---
