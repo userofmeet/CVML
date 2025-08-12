@@ -1,16 +1,19 @@
+#---------------AVG FILER----------------
 import cv2
 import matplotlib.pyplot as plt
 import numpy as np
-path = "D:\LAB SOURCE new\DIP_IMAGES\DIP3E_CH05_Original_Images\Fig0525(a)(aerial_view_no_turb).tif"
-img = cv2.imread(path, 1)
-# img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
-k1 = np.array(np.ones((3, 3), np.float32))/9 #average filter
-print(k1) #printing mask
-output = cv2.filter2D(img, -1, k1) #here change mask variable 
-plt.subplot(1, 2, 1)
-plt.imshow(img)
-plt.title('Original Image')
-plt.subplot(1, 2, 2)
-plt.imshow(output)
-plt.title('Filtered Image')
+path = r"D:\LAB SOURCE new\standard_test_images\standard_test_images\house.tif"
+img = cv2.imread(path, 0)
+OP = []
+title = ['filter_1','filter_2','filter_3']
+
+for i in range (3):
+    j = i + 4
+    k = np.array(np.ones((3+j, 3+j), np.float32))/(3+j)**2 
+    
+    output = cv2.filter2D(img, -1, k)
+    plt.subplot(1,3,i+1)
+    plt.imshow(output,cmap='gray')
+    plt.title(title[i])
+
 plt.show()
