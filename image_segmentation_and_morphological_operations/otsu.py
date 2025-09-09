@@ -6,11 +6,18 @@ imgpath1 = "D:\LAB Source\DIP_IMAGES\DIP3E_CH08_Original_Images\Fig0840_0266.tif
 img1 = cv2.imread(imgpath1, 0) 
 #Between class variance 
 hist = plt.hist(img1.ravel(),256,[0,256]) 
+print(hist[0],"\n", hist[1])
+# y axis -> hist[0] = vaalues of pixels
+# x axis -> hist[1] = just shows the x axia
 # Total pixels in the image 
+
+
 total = np.sum(hist[0]) 
 # calculate the initial weights and the means 
 left, right = np.hsplit(hist[0],[0]) 
 left_bins, right_bins = np.hsplit(hist[1],[0]) 
+print(left, right)
+
 # left weights 
 w_0 = 0.0 
 # Right weights 
@@ -40,6 +47,7 @@ weighted_sum_1=weighted_sum_1, thres=1, fn_max=-np.inf, thresh=0, total=total):
                 mean_1 = weighted_sum_1/np.sum(hist[0][thres+1:]) 
  # Calculate the between-class variance 
              out = w_0*w_1*((mean_0-mean_1)**2) 
+             print(out,thres)
  # # if variance maximum, update it 
              if out>fn_max: 
                 fn_max = out 
@@ -56,6 +64,8 @@ fn_max=-np.inf, thresh=0, total=total)
 print(var_value, thresh_value) 
 # threshold the image 
 ret, thresh_Between = cv2.threshold(img1,0,255,thresh_value) 
+plt.imshow(thresh_Between)
 # Otsu's thresholding using inbuilt function 
 retval, thresh_Otsu = cv2.threshold(img1,0,255,cv2.THRESH_OTSU) 
+plt.imshow(thresh_Otsu)
 print(retval)
