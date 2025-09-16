@@ -17,6 +17,10 @@ You can find the complete lab manual [here](CVML_lab_manual.pdf).
 - `week_03/`: contrast enhancement techniques 
 - `week_04/`: effect of sampling and quantization on an image
 - `week_05/`: smoothing filters in spatial domain
+- `week_06/`: restoration of images
+- `week_07/`: split and merge the R, G, B component from the color image.
+- `week_08/`: segmentation and morphological operations using binary immages
+- `week_09/`: usage of cv2.connectedcomponentswithstats function 
 - *(...add more weeks as needed...)*
 
 ---
