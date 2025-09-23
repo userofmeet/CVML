@@ -20,8 +20,8 @@ You can find the complete lab manual [here](CVML_lab_manual.pdf).
 - `week_06/`: restoration of images
 - `week_07/`: split and merge the R, G, B component from the color image.
 - `week_08/`: segmentation and morphological operations using binary immages
-- `week_09/`: usage of cv2.connectedcomponentswithstats function 
-- *(...add more weeks as needed...)*
+- `week_09/`: usage of cv2.connectedcomponentswithstats function
+- `week_10/`: image classification using K-means clustering algorithm 
 
 ---
 
